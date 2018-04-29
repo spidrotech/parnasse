@@ -1,0 +1,20 @@
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        symfony:
+            client: default
+            types:
+                city:
+                    properties:
+                        id: { type: float }
+                        name: { type: text }
+                        population: { type: integer }
+                        description: { type: text }
+                        country: { type: text }
+                    persistence:
+                        driver: orm
+                        model: AppBundle\Entity\City
+                        finder: ~
+                        provider: ~
+                        listener: ~
