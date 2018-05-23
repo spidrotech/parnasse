@@ -7,11 +7,7 @@ fos_elastica:
             types:
                 city:
                     properties:
-                        id: { type: float }
                         name: { type: text }
-                        population: { type: integer }
-                        description: { type: text }
-                        country: { type: text }
                     persistence:
                         driver: orm
                         model: AppBundle\Entity\City
